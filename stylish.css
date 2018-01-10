@@ -1,0 +1,119 @@
+@keyframes bounceIn {
+  0% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(1.5);
+  }
+  80%{
+	  transfrom:scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes movearound {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:300px; top:0px; transform:rotate(90deg)}
+    50%  {background-color:blue; left:300px; top:300px; transform:rotate(180deg)}
+    75%  {background-color:green; left:0px; top:300px; transform:rotate(270deg)}
+    100% {background-color:red; left:0px; top:0px; transform:rotate(360deg)}
+}
+@keyframes spin{
+	0%		{background-color:yellow;}
+	25%		{background-color:pink; }
+	50% 	{background-color:purple;}
+	75%		{background-color:red;}
+	100% 	{background-color:yellow; transform:rotate(360deg);}
+}
+
+@keyframes invisible{
+	0%		{opacity:0}
+	100%	{opacity:1}
+}
+#transform {
+	width:100px;
+	height:100px;
+	background:red;
+	text-align:center;
+	/*transition:transform 2s;*/
+	transition:all 2s linear 0s;
+}
+#transform:hover{
+	width:300px;
+	transform:rotate(50deg)skew(60deg) translate(100px,30px);
+}
+
+#animation{
+	position:absolute;
+	top:130px;
+	left:130px;
+	width:100px;
+	height:100px;
+	animation:  bounceIn 2s ease;
+	animation-iteration-count: infinite;
+}
+#animation:hover {
+  animation-play-state: paused;
+}
+#piture{
+	width:100px;
+	height:100px;
+}
+
+#piture2{
+	width:100%;
+	height:50px;
+}
+#div2{
+	position:absolute;
+	max-width:100px;
+	max-height:100px;
+	background-color:red;
+	animation-name:movearound;
+	animation-duration:4s;
+	animation-iteration-count: infinite;
+}
+#div2:hover {
+  animation-play-state: paused;
+}
+#container{
+	margin:auto auto;
+}
+#piture3{
+	width:150px;
+}
+#div3{
+	position:absolute;
+	top:400px;
+	left:120px;
+	animation-name:spin;
+	animation-duration:2s;
+	animation-iteration-count: infinite;
+	animation-timing-function:linear;
+}
+#div3:hover {
+	animation-play-state: paused;
+}
+#div4{
+	position:relative;
+	height:100px;
+	width:100px;
+	background-color:red;
+	top:600px;
+	left:100px;
+	opacity:0;
+}
+#piture4{
+	width:200px;
+	height:200px;
+}
+#div4:hover{
+	animation-name:invisible;
+	animation-duration:2s;
+	animation-fill-mode: both;
+}
+
+
+
+
